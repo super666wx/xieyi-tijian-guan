@@ -1,0 +1,14 @@
+node_modules
+config.json
+npm-debug.log*
+.tools
+.git
+.gitignore
+avata-inspector
+docs/screenshots
+tools/_*
+*.log
+output/*
+!output/.gitkeep
+Thumbs.db
+.DS_Store

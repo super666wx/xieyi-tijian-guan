@@ -1,0 +1,33 @@
+{
+  "name": "compliance-review-agent",
+  "version": "1.0.0",
+  "private": true,
+  "description": "协议体检官 · 协议合规体检工具 —— 第二届全国人工智能应用创新大赛参赛作品",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "css:build": "tailwindcss -i ./css/tailwind.src.css -o ./css/tailwind.css --minify",
+    "css:watch": "tailwindcss -i ./css/tailwind.src.css -o ./css/tailwind.css --watch",
+    "law:build": "node tools/build-law-index.js",
+    "test:api": "node tools/api-test.js",
+    "test:ui": "node tools/ui-test.js",
+    "test:file": "node tools/file-test.js"
+  },
+  "keywords": [
+    "AI-Agent",
+    "compliance",
+    "contract-review"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "puppeteer-core": "^23.11.1",
+    "tailwindcss": "^3.4.17"
+  },
+  "dependencies": {
+    "chart.js": "^4.4.6",
+    "express": "^5.3.0",
+    "mammoth": "^1.13.0",
+    "multer": "^2.5.0",
+    "pdf-parse": "^2.4.5"
+  }
+}

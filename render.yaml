@@ -1,0 +1,25 @@
+# Render 一键部署配置（Blueprint）
+# 用法：把仓库推到 GitHub 后，在 Render 里 New + → Blueprint，选中本仓库即可。
+# 需要自己填的两个值是机密，Blueprint 里用 sync: false 留空，部署时在面板里粘贴。
+services:
+  - type: web
+    name: agreement-checkup
+    runtime: docker
+    plan: free
+    region: singapore
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: ACCESS_USER
+        value: hfk
+      - key: ACCESS_PASSWORD
+        sync: false
+      - key: MODEL_BASE_URL
+        value: https://api.deepseek.com/v1
+      - key: MODEL_NAME
+        value: deepseek-chat
+      - key: MODEL_API_KEY
+        sync: false
+      - key: CHAT_ENABLED
+        value: "1"

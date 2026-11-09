@@ -1,0 +1,10 @@
+node_modules/
+config.json
+.tools/
+output/*
+!output/.gitkeep
+*.log
+.DS_Store
+Thumbs.db
+# Windows 快捷方式（本机使用，不进仓库）
+*.lnk

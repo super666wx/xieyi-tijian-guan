@@ -1,0 +1,56 @@
+{
+  "app": {
+    "name": "协议体检官",
+    "version": "1.0.0",
+    "port": 3080,
+    "host": "127.0.0.1"
+  },
+  "model": {
+    "provider": "deepseek",
+    "baseUrl": "https://api.deepseek.com/v1",
+    "apiKey": "",
+    "model": "deepseek-chat",
+    "temperature": 0.2,
+    "maxTokens": 4096,
+    "timeoutMs": 60000,
+    "enabled": true
+  },
+  "review": {
+    "defaultScale": "standard",
+    "maxChars": 20000,
+    "maxFileMB": 20,
+    "stagePacingMs": 220,
+    "maxRisksPerClause": 3
+  },
+  "law": {
+    "enabled": true,
+    "indexFile": "./data/law/index.json",
+    "topK": 2,
+    "minScore": 0.18
+  },
+  "export": {
+    "outputDir": "./output",
+    "formats": [
+      "json",
+      "docx",
+      "md"
+    ]
+  },
+  "access": {
+    "enabled": false,
+    "user": "hfk",
+    "password": "",
+    "ttlHours": 12
+  },
+  "chat": {
+    "enabled": true,
+    "model": "",
+    "temperature": 0.3,
+    "maxTokens": 700,
+    "historyRounds": 4,
+    "maxQuestionChars": 500,
+    "ratePerMin": 20,
+    "ratePerDay": 300,
+    "topK": 4
+  }
+}
